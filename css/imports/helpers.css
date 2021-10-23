@@ -1,0 +1,17 @@
+.lighter {
+  color: rgba(0,0,0,0.75);
+}
+
+ul.reset {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+.container {
+  width: 92%;
+  margin: 0 auto;
+}
+
+.p-2 {
+  padding: 15px !important;
+}

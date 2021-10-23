@@ -1,0 +1,114 @@
+@import url(imports/vars.css);
+@import url(imports/reset.css);
+@import url(imports/helpers.css);
+@import url(imports/fonts.css);
+@import url(imports/components/switcher.css);
+@import url(imports/components/modal.css);
+@import url(imports/components/li-insertable.css);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 475px;
+  max-height: 500px;
+  min-width: 325px;
+  max-width: 350px;
+  margin: 0; padding: 0;
+  font-family: Atkinson;
+  font-size: 13px;
+  overflow: hidden;
+  display: grid;
+  grid-auto-rows: 65px 1fr;
+}
+
+#nav .page-icon {
+  background: url("../../icons/page.svg") center center no-repeat;
+}
+
+#nav .note-icon {
+  background: url("../../icons/note.svg") center center no-repeat;
+}
+
+#nav > li.active .page-icon {
+  background: url("../../icons/page-filled.svg") center center no-repeat;
+}
+
+#nav > li.active .note-icon {
+   background: url("../../icons/note-filled.svg") center center no-repeat;
+}
+
+#nav + * {
+  overflow: hidden;
+  padding: 15px;
+}
+
+#actions {
+  display: flex;
+  justify-content: flex-end;
+  width: 92%;
+  margin: auto;
+}
+
+#insertables {
+  display: grid;
+  grid-auto-rows: 25px 15px 1fr;
+  row-gap: 5px;
+  height: 100%;
+}
+
+#active-insertables {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#active-insertables > ul {
+  overflow-y: auto;
+  padding-bottom: 5px;
+}
+
+#insertables > section {
+  overflow-y: auto;
+  height: 100%;
+  padding-bottom: 5px;
+}
+
+#active-insertables hr {
+  margin-top: 10px;
+  height: 2px;
+}
+
+#active-insertables > details:first-child {
+  min-height: 25px;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+#active-insertables > details:first-child > div {
+  overflow-y: auto;
+  height: calc(100% - 25px);
+  padding-bottom: 15px;
+}
+
+.favorites {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  gap: 10px;
+  max-height: 75px;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+favorite-insertable {
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  border: 1px solid lightgrey;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 5px;
+}

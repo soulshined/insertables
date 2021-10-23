@@ -1,0 +1,94 @@
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0; left: 0;
+  background-color: rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.modal .container {
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  width: 80%;
+  margin: 0 10%;
+  margin-top: 25px;
+}
+
+.modal .body {
+  display : flex;
+  flex-flow: column nowrap;
+  padding: 10px;
+}
+
+.modal textarea,
+.modal input {
+  border : var(--border-light);
+  border-radius: 5px;
+}
+
+.modal textarea {
+  resize: none;
+}
+
+.modal input {
+  height: 25px;
+  display: inline-flex;
+  flex: 1;
+}
+
+.modal .form-group {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.modal .form-group {
+  margin-bottom: 8px;
+}
+
+.modal .form-group > label {
+  padding-right: 8px;
+}
+
+.modal .form-group > input {
+  flex: 1;
+}
+
+.modal .header {
+  padding: 15px 15px 0;
+}
+
+.modal .footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 15px 15px;
+}
+
+contextmenu-modal .modal {
+  overflow: hidden;
+}
+
+contextmenu-modal .modal .container {
+  margin-top: 0 !important;
+  bottom: -125px;
+  opacity: 0;
+  animation: slideup 0.35s forwards;
+}
+
+contextmenu-modal .modal .container button:not(:first-child) {
+  margin-top: 10px;
+}
+
+contextmenu-modal .modal .container .header {
+  text-align: center;
+}
+
+@keyframes slideup {
+  to {
+    opacity: 1;
+    bottom: 25px;
+  }
+}

@@ -1,0 +1,36 @@
+doctype "html"
+html
+{
+
+    head
+    {
+        meta (content="IE=edge" http-equiv=X-UA-Compatible)
+        meta (content="width=device-width, initial-scale=1" name=viewport)
+        meta (charset=utf-8)
+        link (href="/css/popup.css" rel=stylesheet)
+        script (src="/js/model/tag-builder.js")
+    }
+    body
+    {
+        ul (#nav .reset data-switcher="true") {
+            li
+            {
+                span (.icon .note-icon)
+                span "INSERTABLES"
+            }
+        }
+
+        div
+        {
+            div (#insertables) {
+                div (#actions) { button (name=add) "ADD" }
+                hr
+
+                section
+            }
+        } // end of div
+
+        script (src="js/main.js" type=module)
+    }
+
+}

@@ -1,0 +1,39 @@
+li-insertable {
+  display: list-item;
+  list-style : none;
+  border: var(--border-light);
+  border-radius : 4px;
+  padding : 5px 5px;
+  cursor : pointer;
+  user-select : none;
+  font-size: 12px;
+}
+
+li-insertable .title {
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+}
+
+li-insertable .body {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+li-insertable:hover,
+favorite-insertable:hover {
+  box-shadow: var(--drop-shadow-light);
+}
+
+li-insertable:not(:first-child) {
+  margin-top: 6px !important;
+}
+
+li-insertable.dragging,
+favorite-insertable.dragging {
+  border: 2px dashed steelblue;
+  box-shadow: inset var(--drop-shadow-light);
+}

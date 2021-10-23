@@ -1,0 +1,66 @@
+details {
+  margin: 0 0 10px;
+}
+
+details > summary {
+  margin-bottom: 8px;
+  font-size: 15px;
+  overflow-x: auto;
+  word-break: keep-all;
+}
+
+details > *:not(summary) {
+  width: 95%;
+  margin: auto !important;
+}
+
+button, button:disabled {
+  font-family: Atkinson;
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid steelblue;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 4px 10px;
+  color: steelblue;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  outline: 0;
+}
+
+button:not(:disabled):hover,
+button:not(:disabled):focus {
+  border-color: royalblue;
+}
+
+button:not(.outline):not(:disabled):hover,
+button:not(.outline):not(:disabled):focus {
+  background-color: royalblue;
+  color: white;
+}
+
+button:not(:disabled):active {
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2);
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+button.red {
+  border-color: tomato;
+  color: tomato;
+}
+
+button.red:not(.outline):not(:disabled):hover,
+button.red:not(.outline):not(:disabled):focus {
+  background-color: tomato;
+  border-color: tomato;
+}
+
+hr {
+  border: none;
+  background-color: lightgrey;
+  height: 1px;
+  width: 92%;
+}

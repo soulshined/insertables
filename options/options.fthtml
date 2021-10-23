@@ -1,0 +1,44 @@
+doctype "html"
+html
+{
+
+    head
+    {
+        meta (content="IE=edge" http-equiv=X-UA-Compatible)
+        meta (content="width=device-width, initial-scale=1" name=viewport)
+        meta (charset=utf-8)
+        link (href="/css/options.css" rel=stylesheet)
+    }
+    body
+    {
+        fieldset
+        {
+            legend "Data"
+
+            button (#export-data) "Export"
+            span " This may take a while if you have a lot of insertables"
+            br
+            form (name="import" style="margin-top: 10px") {
+                fieldset
+                {
+                    legend "Import"
+
+                    div (#result)
+
+                    input (#import-file-data accept=".json" type=file required)
+                    br
+                    br
+                    button (#import-data) "Import"
+                    span " Clear all insertables and import from file"
+                    br
+                    br
+                    button (#merge-data) "Merge"
+                    span " Merge imports from file with current insertables"
+                }
+            }
+        } // end of fieldset
+
+        script (src="main.js" type=module)
+    }
+
+}
