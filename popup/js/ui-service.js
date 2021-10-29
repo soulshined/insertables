@@ -74,7 +74,7 @@ class UIServiceHandler {
                 );
 
                 const activeTabContent = new TagBuilder('div', 'active-insertables').append(
-                    new InsertableDetails('global', insertables.global),
+                    new InsertableDetails('global', insertables.global.map(g => new InsertableLI(g))),
                     new TagBuilder('hr')
                 );
 

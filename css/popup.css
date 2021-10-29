@@ -1,7 +1,7 @@
 @import url(imports/vars.css);
 @import url(imports/reset.css);
 @import url(imports/helpers.css);
-@import url(imports/fonts.css);
+@import url(imports/fonts/fonts.css);
 @import url(imports/components/switcher.css);
 @import url(imports/components/modal.css);
 @import url(imports/components/li-insertable.css);
